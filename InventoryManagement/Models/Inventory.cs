@@ -15,10 +15,11 @@ namespace InventoryManagement.Models
         #region public properties
         public static BindingList<Product> Products { get; set; } = new BindingList<Product>();
         public static BindingList<Part> AllParts { get; set; } = new BindingList<Part>();
-        #endregion
 
-        #region public Product methods
-        public static void AddProduct(Product product)
+        #endregion
+
+        #region public Product methods
+        public static void AddProduct(Product product)
         {
             product.ProductID = GetNewProductId();
             Products.Add(product);
@@ -78,6 +79,27 @@ namespace InventoryManagement.Models
                 AllParts.RemoveAt(index);
                 AllParts.Insert(index, newPart);
             }
+        }
+
+        public static BindingList<Part> SearchParts(string searchTerm)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm)) return AllParts;
+            searchTerm = searchTerm.ToLower();
+            var results = AllParts.ToList().FindAll(part =>
+            {
+                var result = part.PartID.ToString().Contains(searchTerm) || part.Name.ToLower().Contains(searchTerm);
+
+                if (result) return true;
+
+                if (!result && part is Inhouse inhouse)
+                {
+                    return inhouse.MachineID.ToString().Contains(searchTerm);
+                }
+
+                return (part as Outsourced).CompanyName.ToLower().Contains(searchTerm);
+            });
+
+            return new BindingList<Part>(results);
         }
 
         #endregion

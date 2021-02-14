@@ -1,6 +1,8 @@
 ﻿using InventoryManagement.Forms;
 using InventoryManagement.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace InventoryManagement
@@ -24,9 +26,7 @@ namespace InventoryManagement
 
         private void InitPartsTable()
         {
-            var partsBinding = new BindingSource();
-            partsBinding.DataSource = Inventory.AllParts;
-            mainPartsTable.DataSource = partsBinding;
+            setPartsTableData(Inventory.AllParts);
             mainPartsTable.Columns["InStock"].HeaderText = "Inventory";
         }
 
@@ -66,6 +66,19 @@ namespace InventoryManagement
                 MessageBox.Show("Please select a part to Delete.");
             }
             Inventory.DeletePart(part);
+        }
+
+        private void partsSearchBtn_Click(object sender, EventArgs e)
+        {
+            var results = Inventory.SearchParts(partsSearchInput.Text);
+            setPartsTableData(results);
+        }
+
+        private void setPartsTableData(IList<Part> parts)
+        {
+            var partsBinding = new BindingSource();
+            partsBinding.DataSource = parts;
+            mainPartsTable.DataSource = partsBinding;
         }
     }
 }

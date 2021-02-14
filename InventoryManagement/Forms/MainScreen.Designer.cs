@@ -40,6 +40,8 @@
             this.mainProductModify = new System.Windows.Forms.Button();
             this.mainProductDelete = new System.Windows.Forms.Button();
             this.mainExit = new System.Windows.Forms.Button();
+            this.partsSearchInput = new System.Windows.Forms.TextBox();
+            this.partsSearchBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainPartsTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainProductsTable)).BeginInit();
             this.SuspendLayout();
@@ -173,11 +175,30 @@
             this.mainExit.UseVisualStyleBackColor = true;
             this.mainExit.Click += new System.EventHandler(this.mainExit_Click);
             // 
+            // partsSearchInput
+            // 
+            this.partsSearchInput.Location = new System.Drawing.Point(873, 74);
+            this.partsSearchInput.Name = "partsSearchInput";
+            this.partsSearchInput.Size = new System.Drawing.Size(358, 31);
+            this.partsSearchInput.TabIndex = 13;
+            // 
+            // partsSearchBtn
+            // 
+            this.partsSearchBtn.Location = new System.Drawing.Point(718, 68);
+            this.partsSearchBtn.Name = "partsSearchBtn";
+            this.partsSearchBtn.Size = new System.Drawing.Size(122, 37);
+            this.partsSearchBtn.TabIndex = 14;
+            this.partsSearchBtn.Text = "Search";
+            this.partsSearchBtn.UseVisualStyleBackColor = true;
+            this.partsSearchBtn.Click += new System.EventHandler(this.partsSearchBtn_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2510, 955);
+            this.Controls.Add(this.partsSearchBtn);
+            this.Controls.Add(this.partsSearchInput);
             this.Controls.Add(this.mainExit);
             this.Controls.Add(this.mainProductDelete);
             this.Controls.Add(this.mainProductModify);
@@ -213,5 +234,7 @@
         private System.Windows.Forms.Button mainProductModify;
         private System.Windows.Forms.Button mainProductDelete;
         private System.Windows.Forms.Button mainExit;
+        private System.Windows.Forms.TextBox partsSearchInput;
+        private System.Windows.Forms.Button partsSearchBtn;
     }
 }
