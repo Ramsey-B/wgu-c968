@@ -1,0 +1,11 @@
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csprojAssemblyReference.cache
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.MainScreen.resources
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Properties.Resources.resources
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.GenerateResource.cache
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe.config
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.pdb
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Forms.AddPart.resources
