@@ -51,7 +51,21 @@ namespace InventoryManagement
         private void mainPartModify_Click(object sender, EventArgs e)
         {
             var part = mainPartsTable.CurrentRow.DataBoundItem as Part;
+            if (part == null)
+            {
+                MessageBox.Show("Please select a part to Modify.");
+            }
             new PartInputScreen(part).ShowDialog();
+        }
+
+        private void mainPartDelete_Click(object sender, EventArgs e)
+        {
+            var part = mainPartsTable.CurrentRow.DataBoundItem as Part;
+            if (part == null)
+            {
+                MessageBox.Show("Please select a part to Delete.");
+            }
+            Inventory.DeletePart(part);
         }
     }
 }

@@ -20,22 +20,22 @@ namespace InventoryManagement.Models
         #region public methods
         public void AddAssociatedPart(Part part)
         {
-            this.AssociatedParts.Add(part);
+            AssociatedParts.Add(part);
         }
 
         public Part LookupAssociatedPart(int id)
         {
-            return this.AssociatedParts.FirstOrDefault(part => part.PartID == id);
+            return AssociatedParts.FirstOrDefault(part => part.PartID == id);
         }
 
         public bool RemoveAssociatedPart(int id)
         {
-            var part = this.LookupAssociatedPart(id);
+            var part = LookupAssociatedPart(id);
             if (part == null)
             {
                 return false;
             }
-            return this.AssociatedParts.Remove(part);
+            return AssociatedParts.Remove(part);
         }
         #endregion
     }

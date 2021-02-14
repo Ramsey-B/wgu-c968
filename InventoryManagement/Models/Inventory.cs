@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace InventoryManagement.Models
 {
@@ -70,16 +67,6 @@ namespace InventoryManagement.Models
         public static bool DeletePart(Part part)
         {
             return AllParts.Remove(part);
-        }
-
-        public static bool DeletePart(int partId)
-        {
-            var part = LookupPart(partId);
-            if (part == null)
-            {
-                return false;
-            }
-            return DeletePart(part);
         }
 
         public static void UpdatePart(int id, Part newPart)

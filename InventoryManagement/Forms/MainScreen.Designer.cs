@@ -134,6 +134,7 @@
             this.mainPartDelete.TabIndex = 8;
             this.mainPartDelete.Text = "Delete";
             this.mainPartDelete.UseVisualStyleBackColor = true;
+            this.mainPartDelete.Click += new System.EventHandler(this.mainPartDelete_Click);
             // 
             // mainProductAdd
             // 
