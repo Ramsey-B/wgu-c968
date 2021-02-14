@@ -27,6 +27,9 @@ namespace InventoryManagement.Forms
                 priceInput.Text = product.Price.ToString();
                 minInput.Text = product.Min.ToString();
                 maxLabel.Text = product.Max.ToString();
+
+                pageTitle.Text = "Modify Product";
+                Text = "Modify Product";
             }
         }
 
