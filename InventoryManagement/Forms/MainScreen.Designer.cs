@@ -148,6 +148,7 @@
             this.mainProductAdd.TabIndex = 9;
             this.mainProductAdd.Text = "Add";
             this.mainProductAdd.UseVisualStyleBackColor = true;
+            this.mainProductAdd.Click += new System.EventHandler(this.mainProductAdd_Click);
             // 
             // mainProductModify
             // 
@@ -157,6 +158,7 @@
             this.mainProductModify.TabIndex = 10;
             this.mainProductModify.Text = "Modify";
             this.mainProductModify.UseVisualStyleBackColor = true;
+            this.mainProductModify.Click += new System.EventHandler(this.mainProductModify_Click);
             // 
             // mainProductDelete
             // 

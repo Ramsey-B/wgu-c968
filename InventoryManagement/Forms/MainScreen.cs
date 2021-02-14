@@ -101,5 +101,20 @@ namespace InventoryManagement
             }
             Inventory.DeleteProduct(product);
         }
+
+        private void mainProductAdd_Click(object sender, EventArgs e)
+        {
+            new ProductInputScreen().ShowDialog();
+        }
+
+        private void mainProductModify_Click(object sender, EventArgs e)
+        {
+            var product = mainProductsTable.CurrentRow.DataBoundItem as Product;
+            if (product == null)
+            {
+                MessageBox.Show("Please select a product to Modify.");
+            }
+            new ProductInputScreen(product).ShowDialog();
+        }
     }
 }
