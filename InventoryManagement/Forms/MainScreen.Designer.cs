@@ -201,9 +201,9 @@
         #endregion
 
         private System.Windows.Forms.Label pageHeader;
-        private System.Windows.Forms.DataGridView mainPartsTable;
+        public System.Windows.Forms.DataGridView mainPartsTable;
         private System.Windows.Forms.Label partsTableLabel;
-        private System.Windows.Forms.DataGridView mainProductsTable;
+        public System.Windows.Forms.DataGridView mainProductsTable;
         private System.Windows.Forms.Label productTableLabel;
         private System.Windows.Forms.Button mainPartAdd;
         private System.Windows.Forms.Button mainPartModify;

@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagement.Forms
 {
-    partial class AddPart
+    partial class PartInputScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addPartTitle = new System.Windows.Forms.Label();
+            this.pageTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,14 +49,14 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // addPartTitle
+            // pageTitle
             // 
-            this.addPartTitle.AutoSize = true;
-            this.addPartTitle.Location = new System.Drawing.Point(12, 9);
-            this.addPartTitle.Name = "addPartTitle";
-            this.addPartTitle.Size = new System.Drawing.Size(95, 25);
-            this.addPartTitle.TabIndex = 0;
-            this.addPartTitle.Text = "Add Part";
+            this.pageTitle.AutoSize = true;
+            this.pageTitle.Location = new System.Drawing.Point(12, 9);
+            this.pageTitle.Name = "pageTitle";
+            this.pageTitle.Size = new System.Drawing.Size(95, 25);
+            this.pageTitle.TabIndex = 0;
+            this.pageTitle.Text = "Add Part";
             // 
             // label1
             // 
@@ -215,7 +215,7 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // AddPart
+            // PartInputScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,8 +238,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.addPartTitle);
-            this.Name = "AddPart";
+            this.Controls.Add(this.pageTitle);
+            this.Name = "PartInputScreen";
             this.Text = "AddPart";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,7 +248,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label addPartTitle;
+        private System.Windows.Forms.Label pageTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

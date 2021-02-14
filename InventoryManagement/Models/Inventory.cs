@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace InventoryManagement.Models
 {
@@ -43,11 +44,12 @@ namespace InventoryManagement.Models
 
         public static void UpdateProduct(int id, Product newProduct)
         {
-            var removed = RemoveProduct(id);
-            if (removed) // if removed is false then we couldn't find the product to update
+            var index = Products.ToList().FindIndex(product => product.ProductID == id);
+            if (index > -1) // if index is -1 then we couldn't find the product to update
             {
                 newProduct.ProductID = id; // ensures id's stay static
-                AddProduct(newProduct);
+                Products.RemoveAt(index);
+                Products.Insert(index, newProduct);
             }
         }
         #endregion
@@ -80,13 +82,14 @@ namespace InventoryManagement.Models
             return DeletePart(part);
         }
 
-        public static void UpdatPart(int id, Part newPart)
+        public static void UpdatePart(int id, Part newPart)
         {
-            var deleted = DeletePart(id);
-            if (deleted) // if removed is false then we couldn't find the part to update
+            var index = AllParts.ToList().FindIndex(part => part.PartID == id);
+            if (index > -1) // if index is -1 then we couldn't find the part to update
             {
                 newPart.PartID = id; // ensures id's stay static
-                AddPart(newPart);
+                AllParts.RemoveAt(index);
+                AllParts.Insert(index, newPart);
             }
         }
 
@@ -102,15 +105,17 @@ namespace InventoryManagement.Models
                 Price = 12.11m,
                 Min = 5,
                 Max = 25,
+                MachineID = 15525
             });
 
-            AddPart(new Inhouse()
+            AddPart(new Outsourced()
             {
                 Name = "Pedal",
                 InStock = 11,
                 Price = 8.22m,
                 Min = 5,
                 Max = 25,
+                CompanyName = "The Pedal Co."
             });
 
             AddPart(new Inhouse()
@@ -120,15 +125,17 @@ namespace InventoryManagement.Models
                 Price = 8.33m,
                 Min = 5,
                 Max = 25,
+                MachineID = 12525
             });
 
-            AddPart(new Inhouse()
+            AddPart(new Outsourced()
             {
                 Name = "Seat",
                 InStock = 8,
                 Price = 4.55m,
                 Min = 2,
                 Max = 15,
+                CompanyName = "Sit Down inc."
             });
         }
 

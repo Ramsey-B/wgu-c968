@@ -8,4 +8,4 @@ C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\bin\Debug\In
 C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.pdb
 C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
-C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Forms.AddPart.resources
+C:\Users\ramse\source\repos\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Forms.PartInputScreen.resources

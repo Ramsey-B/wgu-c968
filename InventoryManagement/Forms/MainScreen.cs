@@ -10,15 +10,15 @@ namespace InventoryManagement
         public MainScreen()
         {
             InitializeComponent();
-            Init();
+
+            Inventory.InitParts();
+            Inventory.InitProducts();
+            LoadTables();
         }
         
-        public void Init()
+        public void LoadTables()
         {
-            Inventory.InitParts();
             InitPartsTable();
-
-            Inventory.InitProducts();
             InitProductsTable();
         }
 
@@ -45,12 +45,13 @@ namespace InventoryManagement
 
         private void mainPartAdd_Click(object sender, EventArgs e)
         {
-            new AddPart().ShowDialog();
+            new PartInputScreen().ShowDialog();
         }
 
         private void mainPartModify_Click(object sender, EventArgs e)
         {
-            var test = mainPartsTable.CurrentRow.DataBoundItem;
+            var part = mainPartsTable.CurrentRow.DataBoundItem as Part;
+            new PartInputScreen(part).ShowDialog();
         }
     }
 }
