@@ -32,9 +32,7 @@ namespace InventoryManagement
 
         private void InitProductsTable()
         {
-            var productsBindings = new BindingSource();
-            productsBindings.DataSource = Inventory.Products;
-            mainProductsTable.DataSource = productsBindings;
+            setProductsTableData(Inventory.Products);
             mainProductsTable.Columns["InStock"].HeaderText = "Inventory";
         }
 
@@ -79,6 +77,29 @@ namespace InventoryManagement
             var partsBinding = new BindingSource();
             partsBinding.DataSource = parts;
             mainPartsTable.DataSource = partsBinding;
+        }
+
+        private void productSearchBtn_Click(object sender, EventArgs e)
+        {
+            var results = Inventory.SearchProducts(productSearchInput.Text);
+            setProductsTableData(results);
+        }
+
+        private void setProductsTableData(IList<Product> products)
+        {
+            var productsBindings = new BindingSource();
+            productsBindings.DataSource = products;
+            mainProductsTable.DataSource = productsBindings;
+        }
+
+        private void mainProductDelete_Click(object sender, EventArgs e)
+        {
+            var product = mainProductsTable.CurrentRow.DataBoundItem as Product;
+            if (product == null)
+            {
+                MessageBox.Show("Please select a product to Delete.");
+            }
+            Inventory.DeleteProduct(product);
         }
     }
 }

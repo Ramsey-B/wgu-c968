@@ -30,13 +30,8 @@ namespace InventoryManagement.Models
             return Products.FirstOrDefault(product => product.ProductID == productId);
         }
 
-        public static bool RemoveProduct(int productId)
+        public static bool DeleteProduct(Product product)
         {
-            var product = LookupProduct(productId);
-            if (product == null)
-            {
-                return false;
-            }
             return Products.Remove(product);
         }
 
@@ -50,6 +45,19 @@ namespace InventoryManagement.Models
                 Products.Insert(index, newProduct);
             }
         }
+
+        public static BindingList<Product> SearchProducts(string searchTerm)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm)) return Products;
+            searchTerm = searchTerm.ToLower();
+            var results = Products.ToList().FindAll(product =>
+            {
+                return product.ProductID.ToString().Contains(searchTerm) || product.Name.ToLower().Contains(searchTerm);
+            });
+
+            return new BindingList<Product>(results);
+        }
+
         #endregion
 
         #region public Part methods

@@ -42,6 +42,8 @@
             this.mainExit = new System.Windows.Forms.Button();
             this.partsSearchInput = new System.Windows.Forms.TextBox();
             this.partsSearchBtn = new System.Windows.Forms.Button();
+            this.productSearchInput = new System.Windows.Forms.TextBox();
+            this.productSearchBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainPartsTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainProductsTable)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +166,7 @@
             this.mainProductDelete.TabIndex = 11;
             this.mainProductDelete.Text = "Delete";
             this.mainProductDelete.UseVisualStyleBackColor = true;
+            this.mainProductDelete.Click += new System.EventHandler(this.mainProductDelete_Click);
             // 
             // mainExit
             // 
@@ -184,7 +187,7 @@
             // 
             // partsSearchBtn
             // 
-            this.partsSearchBtn.Location = new System.Drawing.Point(718, 68);
+            this.partsSearchBtn.Location = new System.Drawing.Point(718, 74);
             this.partsSearchBtn.Name = "partsSearchBtn";
             this.partsSearchBtn.Size = new System.Drawing.Size(122, 37);
             this.partsSearchBtn.TabIndex = 14;
@@ -192,11 +195,30 @@
             this.partsSearchBtn.UseVisualStyleBackColor = true;
             this.partsSearchBtn.Click += new System.EventHandler(this.partsSearchBtn_Click);
             // 
+            // productSearchInput
+            // 
+            this.productSearchInput.Location = new System.Drawing.Point(2120, 77);
+            this.productSearchInput.Name = "productSearchInput";
+            this.productSearchInput.Size = new System.Drawing.Size(358, 31);
+            this.productSearchInput.TabIndex = 15;
+            // 
+            // productSearchBtn
+            // 
+            this.productSearchBtn.Location = new System.Drawing.Point(1959, 80);
+            this.productSearchBtn.Name = "productSearchBtn";
+            this.productSearchBtn.Size = new System.Drawing.Size(122, 37);
+            this.productSearchBtn.TabIndex = 16;
+            this.productSearchBtn.Text = "Search";
+            this.productSearchBtn.UseVisualStyleBackColor = true;
+            this.productSearchBtn.Click += new System.EventHandler(this.productSearchBtn_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2510, 955);
+            this.Controls.Add(this.productSearchBtn);
+            this.Controls.Add(this.productSearchInput);
             this.Controls.Add(this.partsSearchBtn);
             this.Controls.Add(this.partsSearchInput);
             this.Controls.Add(this.mainExit);
@@ -236,5 +258,7 @@
         private System.Windows.Forms.Button mainExit;
         private System.Windows.Forms.TextBox partsSearchInput;
         private System.Windows.Forms.Button partsSearchBtn;
+        private System.Windows.Forms.TextBox productSearchInput;
+        private System.Windows.Forms.Button productSearchBtn;
     }
 }
