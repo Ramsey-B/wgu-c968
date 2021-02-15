@@ -52,9 +52,10 @@
             // pageTitle
             // 
             this.pageTitle.AutoSize = true;
+            this.pageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageTitle.Location = new System.Drawing.Point(12, 9);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(95, 25);
+            this.pageTitle.Size = new System.Drawing.Size(302, 74);
             this.pageTitle.TabIndex = 0;
             this.pageTitle.Text = "Add Part";
             // 

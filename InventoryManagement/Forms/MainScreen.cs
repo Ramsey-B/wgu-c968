@@ -98,8 +98,27 @@ namespace InventoryManagement
             if (product == null)
             {
                 MessageBox.Show("Please select a product to Delete.");
+                return;
             }
-            Inventory.DeleteProduct(product);
+            if (product.AssociatedParts.Count > 0)
+            {
+                MessageBox.Show("Cannot delete products that have associated parts.");
+                return;
+            }
+
+            ConfirmDelete(product.Name, product, Inventory.DeleteProduct);
+            //Inventory.DeleteProduct(product);
+        }
+
+        private void ConfirmDelete<ItemType>(string name, ItemType item, Func<ItemType, bool> callback)
+        {
+            var dialogResult = MessageBox.Show($"Are you sure you want to permanently delete {name}?", "Please Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No) return;
+            var deleteResult = callback(item);
+            if (!deleteResult)
+            {
+                MessageBox.Show($"Failed to delete {name}.");
+            }
         }
 
         private void mainProductAdd_Click(object sender, EventArgs e)

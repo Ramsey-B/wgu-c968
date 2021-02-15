@@ -26,7 +26,7 @@ namespace InventoryManagement.Forms
                 inventoryInput.Text = product.InStock.ToString();
                 priceInput.Text = product.Price.ToString();
                 minInput.Text = product.Min.ToString();
-                maxLabel.Text = product.Max.ToString();
+                maxInput.Text = product.Max.ToString();
 
                 pageTitle.Text = "Modify Product";
                 Text = "Modify Product";
@@ -49,12 +49,14 @@ namespace InventoryManagement.Forms
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            // validate price
             if (!decimal.TryParse(priceInput.Text, out var price) || price <= 0)
             {
                 MessageBox.Show("Invalid Price. Price must be a number greater than 0.");
                 return;
             }
 
+            // validate min/max
             int min = 0;
             if (
                 !int.TryParse(maxInput.Text, out var max) ||
@@ -67,12 +69,14 @@ namespace InventoryManagement.Forms
                 return;
             }
 
+            // validate InStock
             if (!int.TryParse(inventoryInput.Text, out var inStock) || inStock < 0)
             {
                 MessageBox.Show("Invalid inventory. Inventory must be a whole number and must not be less than 0.");
                 return;
             }
 
+            // Validate InStock is between min and max
             if (inStock < min || inStock > max)
             {
                 MessageBox.Show($"Invalid inventory. Inventory must a number between min ({min}) and max ({max}).");
@@ -104,7 +108,7 @@ namespace InventoryManagement.Forms
 
         private void addPartBtn_Click(object sender, EventArgs e)
         {
-            var part = associatedPartsTable.CurrentRow.DataBoundItem as Part;
+            var part = allPartsTable.CurrentRow.DataBoundItem as Part;
             if (part == null)
             {
                 MessageBox.Show("Please select a part to add.");

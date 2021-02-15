@@ -51,9 +51,10 @@
             // pageHeader
             // 
             this.pageHeader.AutoSize = true;
+            this.pageHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageHeader.Location = new System.Drawing.Point(12, 9);
             this.pageHeader.Name = "pageHeader";
-            this.pageHeader.Size = new System.Drawing.Size(308, 25);
+            this.pageHeader.Size = new System.Drawing.Size(964, 74);
             this.pageHeader.TabIndex = 0;
             this.pageHeader.Text = "Inventory Management System";
             // 
@@ -78,9 +79,10 @@
             // partsTableLabel
             // 
             this.partsTableLabel.AutoSize = true;
+            this.partsTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partsTableLabel.Location = new System.Drawing.Point(24, 92);
             this.partsTableLabel.Name = "partsTableLabel";
-            this.partsTableLabel.Size = new System.Drawing.Size(62, 25);
+            this.partsTableLabel.Size = new System.Drawing.Size(134, 50);
             this.partsTableLabel.TabIndex = 3;
             this.partsTableLabel.Text = "Parts";
             // 
@@ -104,9 +106,10 @@
             // productTableLabel
             // 
             this.productTableLabel.AutoSize = true;
+            this.productTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productTableLabel.Location = new System.Drawing.Point(1283, 92);
             this.productTableLabel.Name = "productTableLabel";
-            this.productTableLabel.Size = new System.Drawing.Size(97, 25);
+            this.productTableLabel.Size = new System.Drawing.Size(210, 50);
             this.productTableLabel.TabIndex = 5;
             this.productTableLabel.Text = "Products";
             // 

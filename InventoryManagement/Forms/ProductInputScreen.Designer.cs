@@ -58,9 +58,10 @@
             // pageTitle
             // 
             this.pageTitle.AutoSize = true;
+            this.pageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageTitle.Location = new System.Drawing.Point(36, 37);
             this.pageTitle.Name = "pageTitle";
-            this.pageTitle.Size = new System.Drawing.Size(130, 25);
+            this.pageTitle.Size = new System.Drawing.Size(412, 74);
             this.pageTitle.TabIndex = 0;
             this.pageTitle.Text = "Add Product";
             // 
@@ -218,9 +219,10 @@
             // allPartsTableLabel
             // 
             this.allPartsTableLabel.AutoSize = true;
+            this.allPartsTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allPartsTableLabel.Location = new System.Drawing.Point(684, 97);
             this.allPartsTableLabel.Name = "allPartsTableLabel";
-            this.allPartsTableLabel.Size = new System.Drawing.Size(192, 25);
+            this.allPartsTableLabel.Size = new System.Drawing.Size(422, 50);
             this.allPartsTableLabel.TabIndex = 17;
             this.allPartsTableLabel.Text = "All candidate Parts";
             // 
@@ -237,9 +239,10 @@
             // associatedPartsTableLabel
             // 
             this.associatedPartsTableLabel.AutoSize = true;
+            this.associatedPartsTableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.associatedPartsTableLabel.Location = new System.Drawing.Point(684, 542);
             this.associatedPartsTableLabel.Name = "associatedPartsTableLabel";
-            this.associatedPartsTableLabel.Size = new System.Drawing.Size(334, 25);
+            this.associatedPartsTableLabel.Size = new System.Drawing.Size(734, 50);
             this.associatedPartsTableLabel.TabIndex = 19;
             this.associatedPartsTableLabel.Text = "Parts Associated with the Product";
             // 
